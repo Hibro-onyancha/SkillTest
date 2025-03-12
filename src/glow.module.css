@@ -1,0 +1,36 @@
+.glow {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Glow effect following cursor */
+.glow::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(130, 207, 255, 0.9) 15%, rgba(255, 255, 255, 0.5) 50%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Prevents blocking interactions */
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  filter: blur(12px); /* Makes the glow softer */
+}
+
+/* Show glow on hover */
+.glow:hover::before {
+  opacity: 1;
+}

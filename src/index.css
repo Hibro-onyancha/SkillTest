@@ -1,0 +1,20 @@
+/* styles.css */
+:root {
+    --text-primary: 16px Arial, sans-serif;
+    --text-secondary: 14px "Courier New", monospace;
+    --text-color: #333;
+    --clr-primary: #eede00;
+    --clr-secondary: #333232;
+    --clr-background: #252525;
+  }
+  
+  .text-primary {
+    font: var(--text-primary);
+    color: var(--text-color);
+  }
+  
+  .text-secondary {
+    font: var(--text-secondary);
+    color: var(--text-color);
+  }
+  

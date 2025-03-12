@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import GlowElement from './GlowElement'
+
 
 function App() {
   return (
     <div>
-      Hello world
+      <GlowElement children= {
+        <p>
+          Hellow
+        </p>
+      }></GlowElement>
+      <GlowElement children = {
+        <p>
+          Yey!
+        </p>
+      }></GlowElement>
+
     </div>
   )
 }
